@@ -52,6 +52,7 @@ en:
     show_email: Show email addresses
     feedback_rating: Rate feedback
     require_login: Require user to be logged in
+    require_purchase: Require user to have purchased the product
     your_name: Your name
     your_location: Your location
   star:

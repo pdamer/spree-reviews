@@ -15,6 +15,10 @@ class Review < ActiveRecord::Base
   scope :preview,      :limit => Spree::Reviews::Config[:preview_size], :order=>"created_at desc"
   attr_protected :user_id, :product_id, :ip_address
 
+  after_create do 
+    ReviewsMailer.review_posted(self).deliver unless Spree::Reviews::Config[:notify_email].blank?
+  end
+
   def feedback_stars
     return 0 if feedback_reviews.count <= 0
     ((feedback_reviews.sum(:rating)/feedback_reviews.count) + 0.5).floor

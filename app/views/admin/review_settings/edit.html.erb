@@ -20,8 +20,16 @@
     <%= check_box_tag('preferences[require_login]', "1", Spree::Reviews::Config[:require_login]) %>
   </p>
   <p>
+    <label><%= t("spree_reviews.require_purchase") %>:</label>
+    <%= check_box_tag('preferences[require_purchase]', "1", Spree::Reviews::Config[:require_purchase]) %>
+  </p>
+  <p>
     <label><%= t('spree_reviews.preview_size') %>:</label>
     <%= text_field_tag('preferences[preview_size]', Spree::Reviews::Config[:preview_size], :size => 3) %>
+  </p>
+  <p>
+    <label><%= t('spree_reviews.notify_email') %>:</label>
+    <%= text_field_tag('preferences[notify_email]', Spree::Reviews::Config[:notify_email]) %>
   </p>
   <p class="form-buttons">
     <%= button t('update') %>
