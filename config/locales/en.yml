@@ -4,7 +4,7 @@ en:
       review:
         name: Your Name
         title: Title
-        review: Content
+        review: Comments
         rating: Rating
         created_at: Date
         ip_address: IP
