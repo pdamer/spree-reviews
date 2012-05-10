@@ -71,3 +71,5 @@ en:
   write_your_own_review: Write your own review
   was_this_review_helpful: "Was this review helpful to you?"
   you_must_enter_value_for_rating: "You must enter a value for rating."
+  review_login_message: "You must be logged in %{purchased_message} in order to leave a review"
+  has_purchased_message: 'and have purchased the product'

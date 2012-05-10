@@ -4,9 +4,9 @@
   </span>
   <meta itemprop="reviewRating" content="<%= review.rating %>" />
   <% if Spree::Reviews::Config[:show_email] && review.user %>
-    <span itemprop="author"><%= review.user.email %></span>
+    by <span itemprop="author"><%= review.user.email %></span>
   <% else %>
-    <span itemprop="author"><%= review.name %></span>
+    by <span itemprop="author"><%= review.name %></span>
   <% end %>
   <span class="title" itemprop="name">&nbsp; <%= review.title %> </span>
   <br/>

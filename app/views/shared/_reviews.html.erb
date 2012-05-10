@@ -8,6 +8,6 @@
     <%= link_to t('write_your_own_review'), new_product_review_path(@product), :class => "button",
       :rel => "nofollow,noindex" %>
     <% else %>
-      You must log in <%= "and purchase it" if Spree::Reviews::Config[:require_purchase] %> to review this product.
+      <%= t('review_login_message', :purchased_message => (Spree::Reviews::Config[:require_purchase] ? t('has_purchased_message') : '' )) %>
   <% end %>
 </div>
