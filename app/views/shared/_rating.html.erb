@@ -7,7 +7,6 @@
     </span>
   </p>
   <p>(<%= t('based_upon') %> <%= Review.human_name(:count => stars[1]).mb_chars.downcase %>)</p>
-  
   <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
     <meta itemprop="ratingValue" content="<%= stars[0] %>" />
     <meta itemprop="reviewCount" content="<%= stars[1] %>" />
