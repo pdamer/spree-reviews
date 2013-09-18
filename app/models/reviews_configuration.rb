@@ -13,4 +13,7 @@ class ReviewsConfiguration < Configuration
   
   # require login to post reviews
   preference :require_login, :boolean, :default => true
+  
+  # require a user to have purchased the product they want to review.
+  preference :require_purchase, :boolean, :default => true
 end
