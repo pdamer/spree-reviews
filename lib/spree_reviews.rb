@@ -22,7 +22,7 @@ module SpreeReviews
 
     def self.activate
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
-        Rails.application.config.cache_classes? ? require(c) : load(c)
+        Rails.application.config.cache_classes ? require(c) : load(c)
       end
       Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
         Rails.application.config.cache_classes ? require(c) : load(c)
